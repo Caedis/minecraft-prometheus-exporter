@@ -46,6 +46,7 @@ public class TileEntities extends BaseCollector {
                 String dim = world.provider.getDimensionName();
 
                 List<TileEntity> loaded_entities = world.loadedTileEntityList;
+                if (loaded_entities.size() == 0) continue;
                 for (TileEntity te : loaded_entities) {
                     Class<? extends TileEntity> teClass = te.getClass();
                     String teClassName = teClass.getName();
