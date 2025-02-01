@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.Chunks;
 import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.Entities;
 import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.Players;
+import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.Teams;
 import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.Ticks;
 import com.github.cpburnz.minecraft_prometheus_exporter.Collectors.TileEntities;
 import com.github.cpburnz.minecraft_prometheus_exporter.prometheus_exporter.Tags;
@@ -86,6 +87,8 @@ public class PrometheusExporterMod {
         if (ExporterConfig.collector.ticks) new Ticks(this.mc_server).register();
         if (ExporterConfig.collector.chunks) new Chunks(this.mc_server).register();
         if (ExporterConfig.collector.players) new Players(this.mc_server).register();
+        if (ExporterConfig.collector.teams && ModCompat.ServerUtilities.isLoaded())
+            new Teams(this.mc_server).register();
     }
 
     /**

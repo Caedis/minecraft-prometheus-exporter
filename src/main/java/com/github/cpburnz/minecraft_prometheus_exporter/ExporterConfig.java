@@ -38,6 +38,9 @@ public class ExporterConfig {
         @Config.Comment("Whether player metrics should be collected")
         public boolean players;
 
+        @Config.DefaultBoolean(true)
+        @Config.Comment("Whether to collect metrics on ServerUtilities teams")
+        public boolean teams;
     }
 
     public static class Web {
