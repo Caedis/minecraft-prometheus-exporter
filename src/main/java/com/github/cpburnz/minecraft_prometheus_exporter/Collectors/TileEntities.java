@@ -61,7 +61,7 @@ public class TileEntities extends BaseCollector {
             for (EntityKey entity_key : te_totals.keySet()) {
                 double total = te_totals.get(entity_key);
                 String dim_id_str = Integer.toString(entity_key.dim_id);
-                metric.addMetric(Arrays.asList(entity_key.dim, dim_id_str, entity_key.clazz, entity_key.name), total);
+                metric.addMetric(Arrays.asList(dim_id_str, entity_key.dim, entity_key.clazz, entity_key.name), total);
             }
         } else {
             metric = newTEMetric();
