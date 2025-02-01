@@ -23,8 +23,12 @@ public class ExporterConfig {
         public boolean entities;
 
         @Config.DefaultBoolean(true)
-        @Config.Comment("Whether tile entity metrics should be collected")
+        @Config.Comment("Whether ticking tile entity metrics should be collected")
         public boolean tileentities;
+
+        @Config.DefaultBoolean(false)
+        @Config.Comment("Enables logging per tile entity type per dim; replaces tileentities")
+        public boolean tileentities_details;
 
         @Config.DefaultBoolean(true)
         @Config.Comment("Whether ticks metrics should be collected")

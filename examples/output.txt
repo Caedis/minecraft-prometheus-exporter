@@ -201,11 +201,18 @@ jvm_classes_loaded_total 9549.0
 # HELP jvm_classes_unloaded_total The total number of classes that have been unloaded since the JVM has started execution
 # TYPE jvm_classes_unloaded_total counter
 jvm_classes_unloaded_total 0.0
-# HELP mc_dimension_tileentities The number of loaded tileentities in a dim.
+# HELP mc_dimension_tileentities The number of loaded ticking tileentities in a dim.
 # TYPE mc_dimension_tileentities gauge
 mc_dimension_tileentities{id="-1",name="Nether",} 0.0
 mc_dimension_tileentities{id="1",name="The End",} 7.0
 mc_dimension_tileentities{id="0",name="Overworld",} 18.0
+# HELP mc_dimension_tileentities_detailed The number of loaded ticking tileentities in a dim per type.
+# TYPE mc_dimension_tileentities_detailed gauge
+mc_dimension_tileentities_detailed{dim_id="Overworld",dim="0",te_class="net.minecraft.tileentity.TileEntityMobSpawner",te_name="MobSpawner",} 4.0
+mc_dimension_tileentities_detailed{dim_id="Overworld",dim="0",te_class="net.minecraft.tileentity.TileEntityChest",te_name="Chest",} 5.0
+mc_dimension_tileentities_detailed{dim_id="Overworld",dim="0",te_class="net.minecraft.tileentity.TileEntityEndPortal",te_name="Airportal",} 9.0
+mc_dimension_tileentities_detailed{dim_id="Nether",dim="-1",te_class="net.minecraft.tileentity.TileEntityMobSpawner",te_name="MobSpawner",} 3.0
+mc_dimension_tileentities_detailed{dim_id="Nether",dim="-1",te_class="net.minecraft.tileentity.TileEntityChest",te_name="Chest",} 34.0
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
 process_cpu_seconds_total 34.08
