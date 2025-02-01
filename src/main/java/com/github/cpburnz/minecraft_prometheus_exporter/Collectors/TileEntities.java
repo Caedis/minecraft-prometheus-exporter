@@ -67,6 +67,7 @@ public class TileEntities extends BaseCollector {
             metric = newTEMetric();
             for (WorldServer world : DimensionManager.getWorlds()) {
                 int loaded = world.loadedTileEntityList.size();
+                if (loaded == 0) continue;
                 metric.addMetric(
                     Arrays.asList(Integer.toString(world.provider.dimensionId), world.provider.getDimensionName()),
                     loaded);
