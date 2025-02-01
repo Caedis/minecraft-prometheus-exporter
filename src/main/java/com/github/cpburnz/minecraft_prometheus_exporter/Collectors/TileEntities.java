@@ -113,7 +113,7 @@ public class TileEntities extends BaseCollector {
                 return true;
             } else if (obj instanceof EntityKey other) {
                 return (Objects.equals(this.dim, other.dim) && this.dim_id == other.dim_id
-                        && Objects.equals(this.clazz, other.clazz)
+                    && Objects.equals(this.clazz, other.clazz)
                     && Objects.equals(this.name, other.name));
             }
             return false;
