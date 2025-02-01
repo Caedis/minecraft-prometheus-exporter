@@ -22,6 +22,8 @@ If you are coming from the upstream repo, the old config file will transfer the 
 - listen_port
 - jwm_collector
 
+The following changes occured that may require panel adjustments from coming from upstream:
+- mc_player_list: current dimension added
 
 Configuration
 -------------
