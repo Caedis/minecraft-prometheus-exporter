@@ -27,14 +27,14 @@ public class Teams extends BaseCollector {
         return new GaugeMetricFamily(
             "mc_teams_chunk_claims",
             "Number of chunk claims per team per dim.",
-            Arrays.asList("team_id", "team_name", "dim_id", "dim_name"));
+            Arrays.asList("team_id", "team_name", "team_type", "dim_id", "dim_name"));
     }
 
     private static GaugeMetricFamily newLoadsMetric() {
         return new GaugeMetricFamily(
             "mc_teams_chunk_loads",
             "Number of chunks being force loaded per team per dim.",
-            Arrays.asList("team_id", "team_name", "dim_id", "dim_name"));
+            Arrays.asList("team_id", "team_name", "team_type", "dim_id", "dim_name"));
     }
 
     private static GaugeMetricFamily newPlayersMetric() {
@@ -67,6 +67,7 @@ public class Teams extends BaseCollector {
                         team.getId(),
                         team.getTitle()
                             .getUnformattedText(),
+                        team.type.getName(),
                         Integer.toString(world.provider.dimensionId),
                         world.provider.getDimensionName());
                     claimsMetric.addMetric(labels, teamChunks.size());

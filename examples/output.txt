@@ -71,14 +71,12 @@ mc_dimension_tick_seconds_count{id="1",name="The End",} 900.0
 mc_dimension_tick_seconds_sum{id="1",name="The End",} 0.087748228
 # HELP mc_teams_chunk_claims Number of chunk claims per team per dim.
 # TYPE mc_teams_chunk_claims gauge
-mc_teams_chunk_claims{team_id="developer_team",team_name="Developer's Team",dim_id="-1",dim_name="Nether",} 8.0
-mc_teams_chunk_claims{team_id="developer_team",team_name="Developer's Team",dim_id="1",dim_name="The End",} 14.0
-mc_teams_chunk_claims{team_id="developer_team",team_name="Developer's Team",dim_id="0",dim_name="Overworld",} 3.0
+mc_teams_chunk_claims{team_id="developer_team",team_name="Developer's Team",team_type="player",dim_id="1",dim_name="The End",} 14.0
+mc_teams_chunk_claims{team_id="developer_team",team_name="Developer's Team",team_type="player",dim_id="0",dim_name="Overworld",} 3.0
 # HELP mc_teams_chunk_loads Number of chunks being force loaded per team per dim.
 # TYPE mc_teams_chunk_loads gauge
-mc_teams_chunk_loads{team_id="developer_team",team_name="Developer's Team",dim_id="-1",dim_name="Nether",} 2.0
-mc_teams_chunk_loads{team_id="developer_team",team_name="Developer's Team",dim_id="1",dim_name="The End",} 1.0
-mc_teams_chunk_loads{team_id="developer_team",team_name="Developer's Team",dim_id="0",dim_name="Overworld",} 2.0
+mc_teams_chunk_loads{team_id="developer_team",team_name="Developer's Team",team_type="player",dim_id="1",dim_name="The End",} 1.0
+mc_teams_chunk_loads{team_id="developer_team",team_name="Developer's Team",team_type="player",dim_id="0",dim_name="Overworld",} 2.0
 # HELP mc_teams_players Players in a team
 # TYPE mc_teams_players gauge
 mc_teams_players{team_id="developer_team",team_name="Developer's Team",player_uuid="a01a21f5-c117-3c1f-b5d0-e055b927f733",player_name="Developer",} 1.0
